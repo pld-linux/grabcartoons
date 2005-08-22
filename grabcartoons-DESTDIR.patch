@@ -1,0 +1,17 @@
+--- grabcartoons-1.11/Makefile~	2004-05-18 11:33:59.000000000 +0200
++++ grabcartoons-1.11/Makefile	2005-08-22 08:45:49.937799616 +0200
+@@ -8,10 +8,10 @@
+ 	@echo "Valid Targets: install targz. Use with care."
+ 
+ install:
+-	mkdir -p -m 755 $(PREFIX)/bin
+-	mkdir -p -m 755 $(PREFIX)/lib/grabcartoons/modules
+-	install -m 755 grabcartoons.pl $(PREFIX)/bin
+-	install -m 644 modules/*.pl $(PREFIX)/lib/grabcartoons/modules
++	mkdir -p -m 755 $(DESTDIR)$(PREFIX)/bin
++	mkdir -p -m 755 $(DESTDIR)$(PREFIX)/lib/grabcartoons/modules
++	install -m 755 grabcartoons.pl $(DESTDIR)$(PREFIX)/bin
++	install -m 644 modules/*.pl $(DESTDIR)$(PREFIX)/lib/grabcartoons/modules
+ 
+ targz:
+ 	cd $(TARGZDIR); rm -rf grabcartoon*; cvs -d :ext:zamboni@cvs.sourceforge.net:/cvsroot/grabcartoons export -Dtoday -d grabcartoons-$(VERSION) grabcartoons; tar zcvf $(TARGZFILE) grabcartoons-$(VERSION)
