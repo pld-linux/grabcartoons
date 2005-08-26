@@ -1,4 +1,5 @@
 Summary:	commic-summarizing utility
+Summary(pl):	Narzêdzie do streszczania komiksów
 Name:		grabcartoons
 Version:	1.11
 Release:	0.1
@@ -14,6 +15,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GrabCartoons is a comic-summarizing utility. It is modular, and it is
 very easy to write modules for new comics.
+
+%description -l pl
+GrabCartoons to narzêdzie do streszczania komiksów. Jest modularne i
+³atwo do niego dopisywaæ modu³y do nowych komiksów.
 
 %prep
 %setup -q
@@ -32,4 +37,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-/usr/lib/grabcartoons
+%{_prefix}/lib/grabcartoons
