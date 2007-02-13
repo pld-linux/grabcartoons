@@ -1,5 +1,5 @@
 Summary:	commic-summarizing utility
-Summary(pl.UTF-8):   Narzędzie do streszczania komiksów
+Summary(pl.UTF-8):	Narzędzie do streszczania komiksów
 Name:		grabcartoons
 Version:	1.11
 Release:	0.1
